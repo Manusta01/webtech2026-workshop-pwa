@@ -1,0 +1,11 @@
+[
+  "Ein Web App Manifest beschreibt Name, Icons und Display-Modus – ohne es keine Installierbarkeit.",
+  "Service Worker laufen getrennt vom Seiten-Thread und können Netzwerk-Anfragen abfangen.",
+  "Cache-First eignet sich für App-Shell-Assets; Network-First oft besser für häufig wechselnde Daten.",
+  "HTTPS (oder localhost) ist Voraussetzung für Service Worker und viele PWA-APIs.",
+  "Lighthouse prüft Manifest, Service Worker und Offline-Verhalten – gut als Abnahme-Check.",
+  "Precaching legt kritische Dateien beim Install-Event im Cache ab.",
+  "Update-Zyklen: eine neue Service-Worker-Version aktiviert erst nach dem nächsten Seitenwechsel (oder skipWaiting).",
+  "Offline heißt nicht „alles lokal“: nur gecachte oder lokal gespeicherte Ressourcen bleiben erreichbar.",
+  "getUserMedia braucht einen Secure Context und eine explizite Nutzer-Berechtigung für die Kamera."
+]

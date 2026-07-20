@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0f3d3e" />
+    <meta
+      name="description"
+      content="FocusBoard – kompakter Aufgaben-Board für den PWA-Workshop"
+    />
+    <title>FocusBoard</title>
+    <!-- Aufgabe 1: Manifest hier verlinken -->
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="./icons/icon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <img
+            class="brand__mark"
+            src="./icons/icon.svg"
+            alt=""
+            width="36"
+            height="36"
+          />
+          <div>
+            <p class="brand__name">FocusBoard</p>
+            <p class="brand__tag">Workshop-Demo</p>
+          </div>
+        </div>
+        <div class="status" id="network-status" aria-live="polite">
+          <span class="status__dot" aria-hidden="true"></span>
+          <span class="status__label">Online</span>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="panel panel--composer" aria-labelledby="composer-title">
+          <h1 id="composer-title">Neue Aufgabe</h1>
+          <p class="lede">
+            Notiere Fokus-Punkte für heute. Die Liste bleibt lokal im Browser
+            gespeichert – ideal, um später Offline-Verhalten und Caching zu
+            prüfen.
+          </p>
+          <form id="task-form" class="composer">
+            <label class="sr-only" for="task-input">Aufgaben-Titel</label>
+            <input
+              id="task-input"
+              name="title"
+              type="text"
+              maxlength="80"
+              placeholder="z. B. Manifest prüfen…"
+              required
+              autocomplete="off"
+            />
+            <button type="submit">Hinzufügen</button>
+          </form>
+        </section>
+
+        <section class="panel" aria-labelledby="list-title">
+          <div class="panel__head">
+            <h2 id="list-title">Heute</h2>
+            <button type="button" id="clear-done" class="ghost">
+              Erledigte löschen
+            </button>
+          </div>
+          <ul id="task-list" class="task-list"></ul>
+          <p id="empty-state" class="empty">
+            Noch keine Aufgaben – füge die erste hinzu.
+          </p>
+        </section>
+
+        <aside class="panel panel--tip" aria-labelledby="tip-title">
+          <h2 id="tip-title">Tages-Tipp</h2>
+          <p id="tip-text" class="tip">Tipp wird geladen…</p>
+          <button type="button" id="reload-tip" class="ghost">
+            Tipp neu laden
+          </button>
+          <p class="hint">
+            Dieser Tipp kommt aus <code>data/tips.json</code> – später nützlich
+            für Network-First vs. Cache-First.
+          </p>
+        </aside>
+
+        <section class="panel panel--mirror" aria-labelledby="mirror-title">
+          <div class="panel__head">
+            <h2 id="mirror-title">Kamera-Spiegel</h2>
+            <p class="perm" id="camera-permission" aria-live="polite">
+              Berechtigung: <span id="camera-permission-label">unbekannt</span>
+            </p>
+          </div>
+          <p class="lede lede--compact">
+            Demonstriert <code>getUserMedia</code> und die Kamera-Berechtigung
+            (Secure Context: HTTPS oder localhost). Der Stream bleibt lokal im
+            Browser – nichts wird hochgeladen.
+          </p>
+          <div class="mirror">
+            <video
+              id="mirror-video"
+              class="mirror__video"
+              playsinline
+              muted
+            ></video>
+            <p id="mirror-placeholder" class="mirror__placeholder">
+              Kamera noch nicht gestartet.
+            </p>
+          </div>
+          <div class="mirror__actions">
+            <button type="button" id="start-camera">Kamera starten</button>
+            <button type="button" id="stop-camera" class="ghost" disabled>
+              Stoppen
+            </button>
+          </div>
+          <p id="mirror-status" class="hint" role="status"></p>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>
+          Web Technologien 2026 · PWA-Workshop · Start ohne Manifest &amp;
+          Service Worker
+        </p>
+      </footer>
+    </div>
+
+    <script src="./app.js" type="module"></script>
+    <!-- Aufgabe 2: Service Worker hier registrieren -->
+  </body>
+</html>

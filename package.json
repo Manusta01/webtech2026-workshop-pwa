@@ -1,0 +1,12 @@
+{
+  "name": "webtech2026-workshop-pwa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Workshop-Demo: Progressive Web Apps (Web Technologien 2026)",
+  "scripts": {
+    "start": "npx --yes serve app -p 3000"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
