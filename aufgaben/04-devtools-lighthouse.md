@@ -34,6 +34,9 @@
 2. Statuszeile „Berechtigung: …“ und DevTools → **Site settings** / Schloss-Icon prüfen.
 3. Zugriff verweigern oder widerrufen, erneut starten – welche Fehlermeldung erscheint?
 4. Kurz notieren: Warum braucht `getUserMedia` einen Secure Context (wie Service Worker)?
+5. Unter https://manusta01.github.io/webtech2026-workshop-pwa/ existiert ein Deployment der App, um es auch am Handy testen zu können:
+
+   ![QR-Code](./qrcode.png)
 
 ## Checkliste „fertig“
 
