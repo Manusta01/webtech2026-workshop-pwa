@@ -118,13 +118,16 @@
 
       <footer class="footer">
         <p>
-          Web Technologien 2026 · PWA-Workshop · Start ohne Manifest &amp;
-          Service Worker
+          Web Technologien 2026 · PWA-Workshop · Lösung Aufgabe 2 (Manifest + Service Worker)
         </p>
       </footer>
     </div>
 
     <script src="./app.js" type="module"></script>
-    <!-- Aufgabe 2: Service Worker hier registrieren -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("./sw.js");
+      }
+    </script>
   </body>
 </html>

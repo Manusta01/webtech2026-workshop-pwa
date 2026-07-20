@@ -1,0 +1,26 @@
+{
+  "id": "/",
+  "name": "FocusBoard – PWA Workshop",
+  "short_name": "FocusBoard",
+  "description": "Kompaktes Aufgaben-Board als Demo für Progressive Web Apps.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#e8f1ef",
+  "theme_color": "#0f3d3e",
+  "icons": [
+    {
+      "src": "./icons/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
